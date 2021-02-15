@@ -8,10 +8,10 @@
         <img class="rounded img-fluid" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
       </div>
     </div>
-    <%= render 'relationships/follow_button', user: @user %>
+    
   </aside>
   <div class="col-sm-8">
     <%= render 'navigation_tab' %>
-    <%= render 'microposts/microposts', microposts: @microposts %>
+    <%= render 'microposts/favorite_microposts', microposts: @favorite_microposts %>
   </div>
 </div>
