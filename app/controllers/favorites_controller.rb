@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   
   def create
     
-    micropost=Micropost.find(params[:favorite_micropost_id])
+    micropost=Micropost.find(params[:like_id])
     current_user.favorite(micropost)
     flash[:success]='お気に入りに追加しました。'
     #お気に入りページでリダイレクトする場合は、お気に入りページへリダイレクトする。
@@ -14,7 +14,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    micropost=Micropost.find(params[:favorite_micropost_id])
+    micropost=Micropost.find(params[:like_id])
     current_user.unfavorite(micropost)
     flash[:success]='お気に入りから外しました。'
     current_url=request.referer

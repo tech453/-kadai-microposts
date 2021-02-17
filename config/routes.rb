@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create] do
     member do
-      get 'likes', to: 'users#favorite_microposts'
+      get 'likes', to: 'users#likes'
       get :followings
       get :followers
     end

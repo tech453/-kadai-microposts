@@ -12,6 +12,6 @@
   </aside>
   <div class="col-sm-8">
     <%= render 'navigation_tab' %>
-    <%= render 'microposts/microposts', microposts: @favorite_microposts.page(params[:page]) %>
+    <%= render 'microposts/microposts', microposts: @likes.page(params[:page]) %>
   </div>
 </div>
